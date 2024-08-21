@@ -1,0 +1,129 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #F3F5FC;
+    font-family: "Inter", sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    padding: 1rem;
+}
+
+.seccionInput {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    height: 90vh;
+}
+
+.inputUsuario {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    margin-bottom: 2rem;
+}
+
+.placeholderUsuario input {
+    font-size: 1.5rem;
+    border: 0;
+    background-color: #F3F5FC;
+    outline: none;
+    padding: 1rem;
+    border-radius: 8px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.placeholderUsuario input::placeholder {
+    color: #0A3871;
+}
+
+.inputHint {
+    font-size: 0.875rem; /* Tamaño de fuente más pequeño */
+    color: #6c757d; /* Color gris para el texto */
+    margin-top: 0.5rem; /* Espacio superior */
+    display: block; /* Asegura que el texto se muestre debajo del input */
+    text-align: left;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.button {
+    width: 100%;
+    height: 50px;
+    border-radius: 24px;
+    border: 1px solid #0A3871;
+    margin: 0.5rem 0;
+}
+
+.encriptar {
+    background-color: #0A3871;
+    color: #D8DFE8;
+}
+
+.desencriptar {
+    background-color: #D8DFE8;
+    color: #0A3871;
+}
+
+.sectionTextoEncriptado {
+    background-color: #fff;
+    border-radius: 32px;
+    padding: 1rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.textoEncriptado h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.textoEncriptado p {
+    font-size: 1rem;
+}
+
+.copiar{
+    display: none;
+}
+
+/* Media queries para pantallas más grandes */
+@media(min-width: 768px) {
+    .seccionInput {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .inputUsuario, .sectionTextoEncriptado {
+        width: 45%;
+        height: auto;
+    }
+
+    .buttons {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .button {
+        width: 48%;
+        height: 67px;
+    }
+}
+
+@media(max-width: 530px){
+    .imagenMuneco{
+        display: none;
+    }
+}
