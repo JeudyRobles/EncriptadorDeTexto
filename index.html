@@ -4,9 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Encriptador de texto</title>
+    <!-- Link del favicon -->
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico">
+    <!-- Link de la tipografia -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <!-- Links de CSS -->
+    <link rel="stylesheet" href="./css/style.css">
+    <!-- Responsive -->
+    <link rel="stylesheet" href="css/responsive.css">
 </head>
 <body>
     <!-- Header -->
@@ -16,40 +23,55 @@
             <img src="./img/Logo.png" alt="Logo de Alura">
         </nav>
     </header>
-    <!-- Section input -->
-    <section class="seccionInput">
-        <!-- Section input usuario-->
-        <section class="inputUsuario">
-            <div class="placeholderUsuario">
-                <input type="text" placeholder="Ingrese el texto aqui">
-                <small class="inputHint">Solo letras minúsculas y sin acentos</small>
-            </div>
-            <div class="buttons">
-                <button class="button encriptar">
+    
+    <section class="parent">
+
+
+        <article class="main-content">
+            <textarea id="message-input" class="message-input" type="text" placeholder="Ingrese el texto aquí"></textarea>
+        </article>        
+
+
+        <article class="sidebar">
+            <figure class="image-container">
+                <img src="./img/Muñeco.png" alt="Ilustración de un muñeco">
+            </figure>
+            
+            <section class="encrypted-message">
+                <h2>No se encontró ningún mensaje</h2>
+                <p id="textoEncriptado">Ingresa el texto que desees encriptar o desencriptar.</p>
+            </section>
+        
+            <footer class="copy-action">
+                <button class="button copy-button">
+                    Copiar
+                </button>
+            </footer>
+        </article>
+        
+
+        <article class="buttons buttons-container">
+
+            <section class="inputhint-container">
+                <small class="inputHint"> &iopf; Solo letras minúsculas y sin acentos</small>
+            </section>
+
+            <section class="button-container encriptar-container">
+                <button class="button encriptar" onclick="functionEncriptar()">
                     Encriptar
                 </button>
+            </section>
+            
+            <section class="button-container desencriptar-container">
                 <button class=" button desencriptar">
                     Desencriptar
                 </button>
-            </div>
-        </section>
-        <!-- Section texto encriptado -->
-        <section class="sectionTextoEncriptado">
-            <div class="imagenMuneco">
-                <img src="./img/Muñeco.png" >
-            </div>
-            <div class="textoEncriptado">
-                <H2>Ningún mensaje fue encontrado</H2>
-                <p>Ingresa el texto que desees encriptar o desencriptar.</p>
-            </div>
-            <div class="copiar">
-                <button class="button copiar">
-                    Copiar
-                </button>
-            </div>
-        </section>
+            </section>
+
+        </article>
+
     </section>
-    <link rel="stylesheet" href="./css/style.css">
-    <script src="./js/main.js"></script>
+    <!-- Link javascript -->
+    <script src="js/main.js"></script>
 </body>
 </html>

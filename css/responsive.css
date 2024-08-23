@@ -1,0 +1,76 @@
+
+/* Media queries para pantallas más grandes Modificar el 1020px */
+@media (max-width: 1020px) {
+    .parent {
+        grid-template-columns: 1fr; /* Solo una columna */
+        grid-template-rows: auto; /* Las filas se ajustan automáticamente */
+        gap: 16px;
+        height: auto;
+        padding: 2rem; /* Reduce el padding para pantallas pequeñas */
+    }
+    
+    .parent .main-content {
+        grid-column: span 1; /* Ocupa toda la columna disponible */
+        grid-row: auto; /* Ajuste automático de fila */
+    }
+    
+    .parent .sidebar {
+        grid-column: span 1; /* Ocupa toda la columna disponible */
+        grid-row: auto; /* Ajuste automático de fila */
+        grid-column-start: auto; /* Restaura el inicio automático */
+        padding: 1.5rem;
+    }
+    
+    .parent .buttons-container {
+        grid-column: span 1; /* Ocupa toda la columna disponible */
+        grid-row: auto; /* Ajuste automático de fila */
+    }
+
+    .button-container .button{
+        width: 100%;
+    }
+    
+    .message-input{
+        width: 100%;
+        height: auto; /* Quiero un limite de 139 palabras */
+    }
+
+}
+
+@media(max-width: 530px){
+    .parent{
+        height: 90vh;
+    }
+
+    .buttons-container {
+        grid-template-columns: 1fr; /* Solo una columna */
+        grid-template-rows: auto; /* Las filas se ajustan automáticamente */
+    }
+        
+    .buttons-container .inputhint-container {
+        grid-column: span 1; /* Ocupa toda la columna disponible */
+        grid-row: auto; /* Ajuste automático de fila */
+    }
+    
+    .buttons-container .encriptar-container {
+        grid-column: span 1; /* Ocupa toda la columna disponible */
+        grid-row: auto; /* Ajuste automático de fila */
+    }
+    
+    .buttons-container .desencriptar-container {
+        grid-column: span 1; /* Ocupa toda la columna disponible */
+        grid-row: auto; /* Ajuste automático de fila */
+    }
+
+    h2{
+        font-size: 1.8rem;
+    }
+
+    .image-container img{
+        display: none;
+    }
+
+    .message-input{
+        font-size: 1.5rem;
+    }
+}
